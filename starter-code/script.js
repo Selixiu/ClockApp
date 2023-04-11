@@ -55,8 +55,7 @@ const receiveIp = async () => {
   const timeSlice = 05;
 
   let timeOfDay;
-  let firstBit = 17;
-  // let firstBit = parseInt(time.slice(0, 2));
+  let firstBit = parseInt(time.slice(0, 2));
 
   function dayMode() {
     moonIcon.classList.add("hidden");
