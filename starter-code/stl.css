@@ -1,0 +1,237 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+:root {
+  --color-white: white;
+  --color-black: black;
+  --color-gray: #303030;
+  --lowerdiv-background: #f2f2f2;
+}
+p {
+  color: var(--color-gray);
+}
+h1 {
+  font-size: 12.5rem;
+  letter-spacing: -5px;
+}
+h2 {
+  font-size: 3.5rem;
+}
+h3 {
+  font-size: 1.5rem;
+  letter-spacing: 4.8px;
+}
+h4 {
+  font-size: 1.25rem;
+  letter-spacing: 4px;
+}
+
+h6 {
+  font-size: 15px;
+  letter-spacing: 2px;
+  line-height: 2rem;
+  font-weight: 400;
+}
+.hidden {
+  display: none !important;
+}
+.general-width {
+  width: 80%;
+  max-width: 1200px;
+}
+section {
+  width: 100%;
+  height: 100vh;
+  min-height: 645px;
+  background-image: url(./assets/desktop/bg-imagePS1-daytime.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.upper-div {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 100%;
+  /* border: 2px solid white; */
+}
+.vertical-container {
+  color: var(--color-white);
+  /* border: 2px solid red; */
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 0;
+  /* border: 2px solid red; */
+}
+.lower-div {
+  width: 100%;
+  height: 100%;
+  border: 2px solid red;
+  border: 2px solid white;
+  background-color: var(--lowerdiv-background);
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lower-wrapper {
+  height: 100%;
+  display: flex;
+}
+
+/* micromanagement */
+.quote-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  position: relative;
+}
+.refresh-bttn {
+  position: absolute;
+  top: 0;
+  right: -1rem;
+}
+.author {
+  padding-top: 1rem;
+  font-weight: 700;
+}
+.bttn {
+  width: 7rem;
+  padding: 2px 5px 2px 20px;
+  border-radius: 200px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-gray);
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  /* border: 2px solid red; */
+}
+.rotate {
+  transform: rotate(180deg);
+  /* transition: ease-in-out 1s; */
+}
+.nighttime-indicator,
+.daytime-indicator {
+  margin-right: 1rem;
+}
+.greeting-paragraph {
+  display: flex;
+  align-items: center;
+}
+.daytime-indicator {
+  margin-right: 1rem;
+}
+
+.left-div,
+.right-div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 4rem 0;
+}
+.left-div :nth-child(2),
+.right-div :nth-child(2) {
+  padding: 0.5rem 0 3rem 0;
+}
+
+.right-div {
+  padding-left: 5rem;
+}
+.left-div {
+  position: relative;
+}
+.left-div::after {
+  position: absolute;
+  right: 0;
+  content: " ";
+  width: 1px;
+  height: 225px;
+  background-color: #97979776;
+}
+@media (max-width: 1130px) {
+  .left-div::after {
+    content: none;
+  }
+  .upper-div {
+    width: 90%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .vertical-container {
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .author {
+    font-size: 1.5rem;
+  }
+
+  .bttn {
+    width: 10rem;
+  }
+  .lower-wrapper {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .left-div,
+  .right-div {
+    width: 100%;
+    padding: 0;
+  }
+  .right-div {
+    padding-left: 0;
+  }
+  .left-div :nth-child(2),
+  .right-div :nth-child(2) {
+    padding: 0;
+  }
+  .common {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  *,
+  *::after,
+  *::before {
+    font-size: 11px;
+  }
+}
